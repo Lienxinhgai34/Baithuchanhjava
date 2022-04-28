@@ -1,31 +1,44 @@
 package Shape;
 import java.util.Scanner;
-public class Point {
-    //nhap set,get
-    public void get()
-    {
 
+public class Point {
+    protected String tenDiem;
+    protected Double hoanhDo;
+    protected Double tungDo;
+    public Scanner sc = new Scanner(System.in);
+    public String getDiem(){
+        return tenDiem;
     }
-    public void set()
-    {
-        
+    public Double getHoanhDo(){
+        return hoanhDo;
     }
-    // nhap cac phuong thuc
-    public String ten;
-    public float hoanhdo,tungdo;
-    Scanner sc = new Scanner(System.in);
-    public void nhap() {
-   
-        System.out.print("Nhap ten toa do : ");
-            ten = sc.nextLine();
-        System.out.print("Nhap hoanh do : ");
-            hoanhdo = sc.nextFloat();
-        System.out.print("Nhap tung do  : ");
-            tungdo = sc.nextFloat();
+    public Double getTungDo(){
+        return tungDo;
     }
-    
-    public void in()
-    {
-        System.out.printf("Diem co toa do : %s(%f,%f) " ,hoanhdo,tungdo );
+    public void setDiem(String diem){
+        this.tenDiem = diem;
+    }
+    public void setHoanhDo(Double hoanhdo){
+        this.hoanhDo = hoanhdo;
+    }
+    public void setTungDo(Double tungdo){
+        this.tungDo = tungdo;
+    }
+    public Point(){};
+    public Point(String diem,Double hoanhdo,Double tungdo){
+        tenDiem = diem;
+        hoanhDo = hoanhdo;
+        tungDo = tungdo;
+    }
+    public void nhapDiem(){
+        System.out.print("Nhap ten diem: ");
+        tenDiem = sc.nextLine();
+        System.out.print("Nhap hoanh do: ");
+        hoanhDo = sc.nextDouble();
+        System.out.print("Nhap tung do: ");
+        tungDo = sc.nextDouble();
+    }
+    public void inDiem(){
+        System.out.println("Diem " + tenDiem + "(" + hoanhDo + "," + tungDo + ")");
     }
 }

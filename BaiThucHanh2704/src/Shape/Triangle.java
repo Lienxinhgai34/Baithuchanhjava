@@ -6,6 +6,7 @@ public class Triangle extends Point {
     Scanner sc = new Scanner(System.in);
     public void Nhap()
     {
+
         System.out.println("Nhap canh a : ");
         a = sc.nextInt();
         System.out.println("Nhap canh b : ");
